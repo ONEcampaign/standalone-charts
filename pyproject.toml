@@ -3,10 +3,12 @@ name = "standalone-charts"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.12, <4.0"
 dependencies = [
     "oda-data>=2.0.1",
+    "oda-reader>=1.2.1",
     "pandas>=2.2.3",
+    "datacommons-client (>=2.1.0,<3.0.0)",
 ]
 
 [dependency-groups]

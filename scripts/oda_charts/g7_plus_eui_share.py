@@ -1,7 +1,8 @@
 import pandas as pd
-from oda_reader import download_dac2a, download_dac1
-
+from oda_reader import download_dac2a, download_dac1, set_cache_dir
 from scripts.config import Paths
+
+set_cache_dir(Paths.oda_cache)
 
 START: int = 1960
 

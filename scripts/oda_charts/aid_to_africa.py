@@ -1,5 +1,5 @@
 import pandas as pd
-from oda_data import OECDClient, set_data_path
+from oda_data import OECDClient, set_data_path, provider_groupings
 
 from scripts import config
 from scripts.oda_charts.common import LAST_UPDATE
@@ -37,6 +37,11 @@ if __name__ == "__main__":
     # DAC Countries total
     dac = get_total_aid_to_africa(20001)
     dac.to_csv(config.Paths.output / "dac_aid_to_africa.csv", index=False)
+
+    dac_countries = list(provider_groupings()["dac_countries"])
+    dac_c = get_total_aid_to_africa(dac_countries)
+    dac_c.to_csv(config.Paths.output / "dac_countries_aid_to_africa.csv", index=False)
+
 
     # All official bilat
     total = get_bilateral_aid_to_africa(20005)

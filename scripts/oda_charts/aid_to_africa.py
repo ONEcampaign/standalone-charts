@@ -2,12 +2,12 @@ import pandas as pd
 from oda_data import OECDClient, set_data_path
 
 from scripts import config
+from scripts.oda_charts.common import LAST_UPDATE
 
 set_data_path(config.Paths.oda_cache)
 
 BASE_YEAR = 2023
 
-LAST_UPDATE = pd.Timestamp.now().strftime("%Y-%m-%d")
 
 
 def get_total_aid_to_africa(providers: int | list[int]) -> pd.DataFrame:
@@ -33,6 +33,10 @@ if __name__ == "__main__":
     # G7 total
     g7 = get_total_aid_to_africa(20003)
     g7.to_csv(config.Paths.output / "g7_aid_to_africa.csv", index=False)
+
+    # DAC Countries total
+    dac = get_total_aid_to_africa(20001)
+    dac.to_csv(config.Paths.output / "dac_aid_to_africa.csv", index=False)
 
     # All official bilat
     total = get_bilateral_aid_to_africa(20005)

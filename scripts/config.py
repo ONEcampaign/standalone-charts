@@ -9,3 +9,7 @@ class Paths:
     scripts = project / "scripts"
     oda_charts = scripts / "oda_charts"
     oda_cache = oda_charts / ".cache"
+
+# if oda_cache folder does not exist, create it
+if not Paths.oda_cache.exists():
+    Paths.oda_cache.mkdir(parents=True, exist_ok=True)

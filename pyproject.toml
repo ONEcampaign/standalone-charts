@@ -9,6 +9,8 @@ dependencies = [
     "oda-reader>=1.2.1",
     "pandas>=2.2.3",
     "datacommons-client (>=2.1.0,<3.0.0)",
+    "bblocks[data-importers,places]>=2.1.0",
+    "pydeflate>=2.1.3",
 ]
 
 [dependency-groups]

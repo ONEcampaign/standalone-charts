@@ -1196,8 +1196,8 @@ dev = [
 requires-dist = [
     { name = "bblocks", extras = ["data-importers", "places"], specifier = ">=2.1.0" },
     { name = "datacommons-client", specifier = ">=2.1.0,<3.0.0" },
-    { name = "oda-data", specifier = ">=2.0.1" },
-    { name = "oda-reader", specifier = ">=1.2.1" },
+    { name = "oda-data", specifier = ">=2.1.0" },
+    { name = "oda-reader", specifier = ">=1.2.2" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pydeflate", specifier = ">=2.1.3" },
 ]
